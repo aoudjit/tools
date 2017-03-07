@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="GenericMapping" default="all" basedir=".">
+
+	<property name="source" value="src" />
+	<property name="build" value="build" />
+	<property name="dist" value="dist" />
+	<property name="dist_deploy" value="../libs/localLibs" />
+
+	<property name="usr_libs"
+		          value="/usr/lib" />
+
+		<path id="USR_LIB">
+			<fileset dir="${usr_libs}" id="id">
+				<include name="*.jar" />
+			</fileset>
+			<fileset dir="${dist_deploy}" id="id_">
+							<include name="text-parser.jar" />
+						</fileset>
+		</path>
+
+	<target name="all" depends="build,deploy" />
+
+	<target name="build" depends="clean,init,compile,jar" />
+
+	<target name="init">
+		<tstamp />
+		<antcall target="clean" />
+		<mkdir dir="${build}" />
+		<mkdir dir="${dist}" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+		
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${source}" destdir="${build}" classpathref="USR_LIB" />
+	</target>
+
+	<target name="jar" depends="compile">
+		
+		<jar jarfile="${dist}/gen-mapping.jar" basedir="${build}">
+			
+			
+		</jar>
+	</target>
+	<target name="deploy" depends="jar">
+			<copy todir="${dist_deploy}" file="${dist}/gen-mapping.jar"/>
+		</target>
+
+
+
+
+</project>
