@@ -131,23 +131,16 @@
 			<xs:attribute name="type" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="card"/>
-						<xs:enumeration value="cardTemplate"/>
-						<xs:enumeration value="me"/>
-						<xs:enumeration value="rack"/>
-						<xs:enumeration value="shelf"/>
-						<xs:enumeration value="slot"/>
+						<xs:enumeration value=""/>
+						
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
 			<xs:attribute name="paramValue">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="session:cardName"/>
-						<xs:enumeration value="session:rackName"/>
-						<xs:enumeration value="session:shelfName"/>
-						<xs:enumeration value="session:siteName"/>
-						<xs:enumeration value="session:slotName"/>
+						<xs:enumeration value=""/>
+						
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
@@ -161,12 +154,8 @@
 			<xs:attribute name="internalObject" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="com.telcordia.discoveryadapter.common.Card"/>
-						<xs:enumeration value="com.telcordia.discoveryadapter.common.ME"/>
-						<xs:enumeration value="com.telcordia.discoveryadapter.common.Rack"/>
-						<xs:enumeration value="com.telcordia.discoveryadapter.common.Shelf"/>
-						<xs:enumeration value="com.telcordia.discoveryadapter.common.Slot"/>
-						<xs:enumeration value="dz.ericsson.commun.mapping.test.Card"/>
+						<xs:enumeration value=""/>
+						
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
@@ -242,7 +231,7 @@
 			<xs:attribute name="objectClass" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="dz.ericsson.commun.mapping.test.tools"/>
+						<xs:enumeration value=""/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
@@ -276,13 +265,8 @@
 			<xs:attribute name="name" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="CTRL CODE No."/>
-						<xs:enumeration value="INTFC(1) CODE No."/>
-						<xs:enumeration value="INTFC(2) CODE No."/>
-						<xs:enumeration value="MODEM CODE No.{|(No.1)|(DIR-A)}"/>
-						<xs:enumeration value="MODEM CODE No.{|(No.2)|(DIR-B)}"/>
-						<xs:enumeration value="ODU CODE No.{|(No.1)|(DIR-A)}"/>
-						<xs:enumeration value="ODU CODE No.{|(No.2)|(DIR-B)}"/>
+						<xs:enumeration value=""/>
+						
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
